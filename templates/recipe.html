@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block content %}
+
+    <h1>These are recommended recipes containing:</h1>
+    <h2> {{recipe_name}}</h2>
+
+        <div class="row">
+            {% for recipe in recipes %}
+                <div class="col-md-4">
+                    <article class="media content-section">
+                        <div class="media-body">
+                            <div class="article-metadata">
+                                <a class="mr-2" href="{{ recipe.f2f_url }}">{{ recipe.title }}</a>
+                                <p><small class><a class="text-muted" href="{{ recipe.source_url }}"> {{ recipe.publisher }}</a></small></p>
+                                <a href="{{ recipe.f2f_url }}"><img src="{{ recipe.image_url }}" class="img-fluid" width="auto" height="auto" alt="Responsive image"></a>
+                            </div>
+
+                        </div>
+                    </article>
+                </div>
+            {% endfor %}
+        </div>
+
+
+
+
+
+{% endblock content %}
