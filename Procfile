@@ -1,1 +1,1 @@
-web: gunicorn recipegenerator2019:app
+web: gunicorn app:app
